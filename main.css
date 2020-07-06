@@ -1,0 +1,33 @@
+.main {
+    outline:4px double hotpink;
+    outline-offset:10px;
+    background:lightyellow;
+    border:1px solid mediumvioletred;
+    margin:20px;
+    text-align:center;
+    color:mediumvioletred;
+    padding:20px;
+    z-index:1;
+}
+.main--heading {
+    color:hotpink;
+}
+.main__uList {
+    font-weight: bold;
+    z-index:3;
+}
+.main__uList-background {
+    position:relative;
+    top:-150px;
+    left:15px;
+    z-index:2;
+}
+.main__uList-background img {
+    width: 100px;
+    height:auto;
+    opacity:0.3;
+}
+.main p {
+    /* position:absolute; */
+    /* Yes I see what that does but we're not doing that. */
+}
