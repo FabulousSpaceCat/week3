@@ -8,4 +8,4 @@ Stealth ninja conflict activate!
 
 I am creating conflict here
 
-Anyway, re: the homework, hopefully that's what you were asking for.  Let me know if I need to fix something.  Yes I see what absolute positioning did to my prargraph, let's not do that, k?
+Anyway, re: the homework, I see what absolute positioning did to my prargraph, let's not do that, k?  Go look at the cupcake.
