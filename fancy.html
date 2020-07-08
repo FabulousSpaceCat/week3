@@ -11,28 +11,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth Ellen">
     <title>Do you want to build a snowman?</title>
 </head>
-    <header>
+    <header role="banner">
         <h1 class="title">Do you want to build a snowman?</h1>
     </header>
-<main>
-    <form class="form" aria-label="Gauging snowman build interest">
+<main role="main">
+    <form class="form" role="form">
         <label class="form--label" for="name">What's your name?</label>
         <br>
-        <input type="text" class="form--textinput" id="name" name="name" placeholder="friend" autocomplete="off" autofocus />
+        <input type="text" role="textinput" class="form--textinput" id="name" name="name" placeholder="friend" autocomplete="off" autofocus />
         <br>
         <div class="form--radioContainer">
             <input type="radio" name="nothappening" id="option-1">
-            <label for="option-1"><span class="form--radio">No</span></label>
+            <label for="option-1"><span class="form--radio" role="radiogroup">No</span></label>
         </div>
-        <div class="form--radioContainer">
+        <div class="form--radioContainer" role="radiogroup">
             <input type="radio" name="nothappening" id="option-2">        
-            <label for="option-2"><span class="form--radio">Go Away</span></label>
+            <label for="option-2"><span class="form--radio" role="radiogroup">Go Away</span></label>
         </div>
         <br>
-        <button class="form--button">It doesn't have to be a snowman.</button>
+        <button class="form--button" role="button">Or ride our bikes around the halls?</button>
         <br>
-        <button class="form--button">Or ride our bikes around the halls?</button>
+        <button class="form--button" role="button">It doesn't have to be a snowman.</button>
         <br>
-        <button class="form--button-excited">Come on, let's go and play!</button>
+        <button class="form--button-excited" role="button">Come on, let's go and play!</button>
     </form>
 </main>
