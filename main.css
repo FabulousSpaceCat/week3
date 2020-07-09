@@ -1,40 +1,137 @@
-.main {
-    outline:4px double hotpink;
-    outline-offset:10px;
-    background:lightyellow;
-    border:1px solid mediumvioletred;
+body {
     text-align:center;
+    background:lightyellow;
     color:mediumvioletred;
-    z-index:1;
-    max-width: 50vw;
-    margin: 18px auto 0px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+    text-decoration:none;
+    color:hotpink;
+}
+a:hover {
+    color:pink;
+}
+.container {
+    display:-ms-grid;
+    display:grid;
+        grid-template-areas:
+        'header'
+        'left'
+        'right'
+        'footer';
+    grid-gap:10px;
+    margin:20px;
+    outline: 4px double mediumvioletred;
+    outline-offset:10px;
+}
+.container__header {
+    -ms-grid-row:1;
+    -ms-grid-column:1;
+    grid-area:header;
+    height:20vh;
+    border:1px solid hotpink;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+}
+.container__header--title {
+    color:mediumvioletred;
+    font-family: Satisfy, cursive;
+    font-size: 5vw;
+}
+.container__column {
+    border:1px solid hotpink;
+    text-align:center;
     padding:20px;
     position:relative;
 }
-.main--heading {
-    color:hotpink;
-    position:relative;
-    right:-20%;
-    max-width:80%;
-    border:1px solid palegoldenrod;
-}
-.main--uList {
-    font-weight: bold;
-    z-index:3;
-}
-.main--uList-background {
+.container__column::before {
+    content:'';
+    display:block;
     position:absolute;
-    bottom:20px;
-    left:45%;
-    z-index:2;
-}
-.main--uList-background img {
-    width: 100px;
-    height:auto;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
     opacity:0.3;
+    background-image:url('https://www.pinclipart.com/picdir/big/52-520158_small-cupcake-clipart-cupcake-clipart-transparent-background-png.png')  ;
+    background-repeat:repeat-y;
+    background-position:center;
+    background-size:contain;
 }
-.main p {
-    /* position:absolute; */
-    /* Yes I see what that does but we're not doing that. Go look at the cupcake.*/
-    max-width:80%;
+.container__column--left {
+    -ms-grid-row:3;
+    -ms-grid-column:1;
+    grid-area:left;
+}
+.container__column--right {
+    -ms-grid-row:5;
+    -ms-grid-column:1;
+    grid-area:right;
+}
+.container * ul {
+    font-weight: bold;
+}
+.container * p {
+    width:80%;
+    margin:auto;
+    overflow:clip;
+}
+.container__footer {
+    -ms-grid-row:7;
+    -ms-grid-column:1;
+    grid-area:footer;
+    height:15vh;
+    border:1px solid hotpink;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container--big {
+            grid-template-areas:
+            'header header'
+            'left right'
+            'footer footer';
+    }
+    .container__column::before {
+        background-repeat: repeat-x;
+    }
+
+    .container--big > .container__header {
+        -ms-grid-row:1;
+        -ms-grid-column:1;
+        -ms-grid-column-span:2;
+    }
+
+    .container--big > .container__column--left {
+        -ms-grid-row:2;
+        -ms-grid-column:1;
+    }
+
+    .container--big > .container__column--right {
+        -ms-grid-row:2;
+        -ms-grid-column:2;
+    }
+
+    .container--big > .container__footer {
+        -ms-grid-row:3;
+        -ms-grid-column:1;
+        -ms-grid-column-span:2;
+    }
 }
