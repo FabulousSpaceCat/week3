@@ -28,11 +28,11 @@ a:hover {
     -ms-grid-row:1;
     -ms-grid-column:1;
     grid-area:header;
-    height:20vh;
     border:1px solid hotpink;
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
+    flex-direction:column;
     -webkit-box-align:center;
         -ms-flex-align:center;
             align-items:center;
@@ -44,6 +44,15 @@ a:hover {
     color:mediumvioletred;
     font-family: Satisfy, cursive;
     font-size: 5vw;
+}
+.container__header--excited {
+    height:50vh;
+    width:auto;
+    padding-bottom:2vh;
+}
+.container__header--excited:hover {
+    animation: shakeboy 0.5s;
+    animation-iteration-count: infinite;
 }
 .container__column {
     border:1px solid hotpink;
@@ -133,5 +142,51 @@ a:hover {
         -ms-grid-row:3;
         -ms-grid-column:1;
         -ms-grid-column-span:2;
+    }
+}
+@keyframes shakeboy{
+    0%{
+        translate: 2px, 2px;
+        rotate: 0deg;
+    }
+    10%{
+        translate: -2px, -4px;
+        rotate: -2deg;
+    }
+    20%{
+        translate: -6px, 0px;
+        rotate: 2deg;
+    }
+    30%{
+        translate: 6px, 4px;
+        rotate: 0deg;
+    }
+    40%{
+        translate: 2px, -2px;
+        rotate: 2deg;
+    }
+    50%{
+        translate: 2px, 4px;
+        rotate: -2deg;
+    }
+    60%{
+        translate: -6px, 2px;
+        rotate: 0deg;
+    }
+    70%{
+        translate: 6px, 2px;
+        rotate: -2deg;
+    }
+    80%{
+        translate: -2px, -2px;
+        rotate: 2deg;
+    }
+    90%{
+        translate: 2px, 4px;
+        rotate: 0deg;
+    }
+    100%{
+        translate: 2px, -4px;
+        rotate: -2deg;
     }
 }
